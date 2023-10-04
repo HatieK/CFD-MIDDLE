@@ -55,7 +55,7 @@ const HomePage = () => {
     galleryService.getGalleries
   );
 
-  // console.log("🚀galleriesData---->", galleriesData);
+  console.log("🚀galleriesData---->", galleriesData);
   const galleries = galleriesData?.data.galleries?.[0]?.images || [];
   console.log("🚀galleries---->", galleries);
   return (
@@ -69,7 +69,9 @@ const HomePage = () => {
       <TestimonialSection />
       {/* --------------------------------faq-------------------------------- */}
       <FaqSection questions={questions} loading={questionsLoading} />
-      <GallerySection galleries={galleries} loading={galleriesLoading} />
+      {!galleriesLoading && (
+        <GallerySection galleries={galleries} loading={galleriesLoading} />
+      )}
       <CallRegisterSection />
     </main>
   );
