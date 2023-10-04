@@ -1,5 +1,5 @@
 import React from "react";
-import PageLoading from "../../components/PageLoading";
+// import PageLoading from "../../components/PageLoading";
 import Headers from "../../components/Header";
 import Navbar from "../../components/Navbar";
 import Overlay from "../../components/Overlay";
@@ -14,7 +14,7 @@ const MainLayout = () => {
   return (
     <MainContextProvider>
       <AuthContextProvider>
-        <PageLoading />
+        {/* <PageLoading /> */}
         <Headers />
         <Navbar />
         <Overlay />
